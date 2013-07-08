@@ -821,11 +821,6 @@ var Zepto = (function() {
 // window.Zepto = Zepto
 // '$' in window || (window.$ = Zepto)
 
-// Add Wrapper
-if ( typeof define === "function" && define.amd ) {
-  define( function () { return Zepto; } );
-}
-
 ;(function($){
   function detect(ua){
     var os = this.os = {}, browser = this.browser = {},
@@ -1569,3 +1564,8 @@ if ( typeof define === "function" && define.amd ) {
 
   testEl = null
 })(Zepto)
+
+// Add Wrapper
+if ( typeof define === "function" && define.amd ) {
+  define( function () { return Zepto; } );
+}
